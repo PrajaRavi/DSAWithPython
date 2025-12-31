@@ -3,6 +3,12 @@
 # sorting a linked list 
 # method1->using extra space use an extra array copy all the ll element in that array then sort that array and  again push all the element of that array in ll
 # method2->merge sort (most efficient method)
+# Stacks are just like a linked list where all operation occur from the top(head)
+
+# <-----------------Most efficient method to reverse a string is using slicing---------------------------->
+# myword="Ravi"
+# print(myword[::-1])
+
 class Node:
   def __init__(self,value):
     self.data=value
@@ -12,8 +18,8 @@ class LL:
   def __init__(self):
     self.__head=None
     self.__n=0
-    self.PN=None
-    self.mylist=[]
+    self.__PN=None
+    self.__mylist=[]
 
   def __len__(self):
     return self.__n
@@ -131,22 +137,22 @@ class LL:
     # method 1(inefficient since using extra space)
     curr=self.__head
     while(curr!=None):
-      self.mylist.append(curr.data)
+      self.__mylist.append(curr.data)
       curr=curr.next
-    self.mylist.sort()  
+    self.__mylist.sort()  
     curr=self.__head
-    for i in range(0,len(self.mylist)):
-      curr.data=self.mylist[i]
+    for i in range(0,len(self.__mylist)):
+      curr.data=self.__mylist[i]
       curr=curr.next
   def reverse(self):
    result=""
    curr=self.__head
    while(curr!=None):
      NewNext=curr.next
-     curr.next=self.PN
-     self.PN=curr
+     curr.next=self.__PN
+     self.__PN=curr
      curr=NewNext
-   self.__head=self.PN  
+   self.__head=self.__PN  
 
 
 

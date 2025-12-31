@@ -433,6 +433,9 @@ class Stack:
   #     return
   #   print(self.Top.data)  
 
+
+
+
   # peek function in case of Balanced Paranthesis
   def peek(self):
     if(self.Top==None):
@@ -482,6 +485,32 @@ s2=Stack()
 # s1.push('Hello')   
 # s1.push('Hello1')   
 # s1.push('Hello12')   
+# s.Insert_from_head("hello")
+# print(len(s))
+# <----------------------------Balanced Pranthesis problem------------------------------------------->
+# s=Stack()
+# a="[(a+b)"
+# def Balanced_paranthesis(a,s):
+#   for i in range(len(a)):
+#     if((a[i]=="[" or a[i]=="("or a[i]=="{")):
+#         if(a[i]=="["):
+#           s.Insert_from_head("]")
+#         elif(a[i]=="("):
+#           s.Insert_from_head(")")
+#         elif(a[i]=="{"):
+#           s.Insert_from_head("}")
+#     elif(a[i]=="]" or a[i]=="}" or a[i]==")"):
+#       temp=s.Delete_from_head()  
+#       if(temp!=a[i]):
+#         print("false")
+#         return
+#   if(len(s)==0):    
+#     print("True")
+#   else:
+#     print("false")
+        
+      
+# Balanced_paranthesis(a,s)
 
 # s1.ChangeString('Ravi','uuurrr')
 
@@ -611,6 +640,7 @@ s2=Stack()
 
 
 # <---------------------QUES-------------------------------->
+# here insertion will be from tail and deletion will be from head
 # we will create a ques using concept of  Linked List
 # class Node:
 #   def __init__(self,value):
@@ -794,6 +824,122 @@ s2=Stack()
 # # print(D1['hello'])
 # print(D1.slots)
 # print(D1.data)
+
+# <------------------------implementing deque(pop) and enque(push) method in a ques created using two stack----------------------> 
+# class Node:
+#   def __init__(self,data):
+#     self.data=data
+#     self.next=None
+
+# class Stack:
+#   def __init__(self):
+#     # This is condition of an empty  stack
+#     self.Top=None
+#     self.n=0 #it will tell total no of elements in the stack
+#   def IsEmpty(self):
+#     # it will return true if stack is empty else false
+#     if(self.n==0):
+#       print("True")
+#     else:
+#       print("False")
+#   def push(self,item):
+#     # it is same as insertFromHead in a LL
+#     curr=self.Top
+#     new_node=Node(item)
+#     new_node.next=curr
+#     self.Top=new_node
+#     self.n+=1
+#     # str method for uuurrr
+#   # def __str__(self):
+#   #   curr=self.Top
+#   #   result=''
+#   #   while(curr!=None):
+#   #     result+=str(curr.data)+''
+#   #     curr=curr.next
+#   #   return f'{result}'  
+#   def __str__(self):
+#     curr=self.Top
+#     result=''
+#     while(curr!=None):
+#       result+=str(curr.data)+'->'
+#       curr=curr.next
+#     return f'{result[:-2]}'  
+#   def size(self):
+#     return self.n 
+#   # def peek(self):
+#   #   if(self.Top==None):
+#   #     print('Stack is empty ',end='')
+#   #     return
+#   #   print(self.Top.data)  
+
+
+
+
+#   # peek function in case of Balanced Paranthesis
+#   def peek(self):
+#     if(self.Top==None):
+#       print('Stack is empty ',end='')
+#       return
+#     return (self.Top.data)  
+
+#   def pop(self):
+#   #it is same as delete from head in LL
+#     if(self.Top!=None):
+#       curr=self.Top
+#       self.Top=curr.next
+#       self.n-=1
+#       return curr.data
+#     else:
+#       print("Empty Stack",end='')
+#   def ReverseString(self,string):
+#     revstr=''
+#     for i in range(len(string)):
+#       self.push(string[i])
+#     for i in range(len(string)):
+#       revstr+=self.pop()
+#     print(revstr)
+
+# s=Stack()
+# s1=Stack()
+# # print(s.size())
+# class Queus:
+#   def __init__(self):
+#     self.s1=s
+#     self.s2=s1
+  
+#   def eneque(self,value):
+#     self.s1.push(value)
+#   def traverse(self):
+#     if(self.s1.size()==0):
+#       print("if")
+#       print(self.s2)
+#     else:
+#       print("else")
+#       print(self.s1)
+#   def deque(self):
+#     # print(self.s2.size())
+#     if(self.s2.size()==0 and self.s1.size()==0):
+#       return "que is empty"
+#     elif(self.s2.size()==0):
+#       for i in range(self.s1.size()):
+#         temp=self.s1.pop()
+#         self.s2.push(temp)
+#       self.s2.pop()  
+#     else:
+#       self.s2.pop()  
+
+      
+# q=Queus()
+# q.eneque(5)
+# q.eneque(6)
+# q.eneque(7)
+# q.deque()  
+# q.deque()  
+# # q.deque()  
+# # q.deque()  
+# q.traverse()      
+ 
+
 
 
 
