@@ -4,72 +4,72 @@
 # also instance variables are inside constructor and class variables are outside constructor
 
 
-# class ATM:
-# # static/class variable
-#   __counter=0
-#   # instance variables
-#   def SetCounter(self,value):
-#     if type(value)==int:
-#       self.__counter==value
-#     else:
-#       print("cant do this operation") 
+class ATM:
+# static/class variable
+  __counter=0
+  # instance variables
+  def SetCounter(self,value):
+    if type(value)==int:
+      self.__counter==value
+    else:
+      print("cant do this operation") 
 
-#   def __init__(self):
-#     # print(id(self))
-#     self.sno=ATM.__counter #class variables are called using class_name.variable_name and to make them private use 
-#     # __static_variable_name
-#     ATM.__counter+=1
-#     self.__a=''
-#     self.__pin=''
-#     self.__balance=0
-#     while(self.__a!='5'):
-#       self.__a=input('''
-# How would you like to proceed???
-# 1.Enter 1 to create pin-->
-# 2.Enter 2 for debit-->
-# 3.Enter 3 for credit-->
-# 4.Enter 4 for check balance-->
-# 5.Enter 5 for exit -->
+  def __init__(self):
+    # print(id(self))
+    self.sno=ATM.__counter #class variables are called using class_name.variable_name and to make them private use 
+    # __static_variable_name
+    ATM.__counter+=1
+    self.__a=''
+    self.__pin=''
+    self.__balance=0
+    while(self.__a!='5'):
+      self.__a=input('''
+How would you like to proceed???
+1.Enter 1 to create pin-->
+2.Enter 2 for debit-->
+3.Enter 3 for credit-->
+4.Enter 4 for check balance-->
+5.Enter 5 for exit -->
                    
-# ''')  
-#       if(self.__a=='1'):
-#         pin=input("Enter 4 digit pin--> ")
-#         if(len(pin)==4 and type(pin)==str):
-#           self.__pin=pin
-#         else:
-#           print("pin should have 4 digit")
+''')  
+      if(self.__a=='1'):
+        pin=input("Enter 4 digit pin--> ")
+        if(len(pin)==4 and type(pin)==str):
+          self.__pin=pin
+        else:
+          print("pin should have 4 digit")
       
-#       elif(self.__a=='2'):
-#         if(self.__pin):        
-#           self.temp=input("Enter 4 digit pin--> ")
-#           if(int(self.temp)==int(self.__pin)):
-#             self.__amount=input("Enter Amount--> ")
-#             self.__balance=self.__balance+int(self.__amount)
-#             print("operation successfully")
-#           else:
-#             print("Invalid pin")
-#         else:
-#           print('first create pin')   
-#       elif(self.__a=='3'):
-#         self.temp=input("Enter 4 digit pin--> ")
-#         if(int(self.temp)==int(self.__pin)):
-#           self.__amount=input("Enter Amount--> ")
-#           if(int(self.__amount)<int(self.__balance)):
-#             self.__balance=self.__balance-int(self.__amount)
-#             print("operation successfully")
-#           else:
-#             print("Your balance is less")  
-#         else:
-#           print("Invalid pin")
+      elif(self.__a=='2'):
+        if(self.__pin):        
+          self.temp=input("Enter 4 digit pin--> ")
+          if(int(self.temp)==int(self.__pin)):
+            self.__amount=input("Enter Amount--> ")
+            self.__balance=self.__balance+int(self.__amount)
+            print("operation successfully")
+          else:
+            print("Invalid pin")
+        else:
+          print('first create pin')   
+      elif(self.__a=='3'):
+        self.temp=input("Enter 4 digit pin--> ")
+        if(int(self.temp)==int(self.__pin)):
+          self.__amount=input("Enter Amount--> ")
+          if(int(self.__amount)<int(self.__balance)):
+            self.__balance=self.__balance-int(self.__amount)
+            print("operation successfully")
+          else:
+            print("Your balance is less")  
+        else:
+          print("Invalid pin")
       
-#       elif(self.__a=='4'):
-#         print(f"Your balance is {self.__balance}")
+      elif(self.__a=='4'):
+        print(f"Your balance is {self.__balance}")
         
-#       elif(self.__a=='5'):
-#         print("Bye Have a good day!!!")
+      elif(self.__a=='5'):
+        print("Bye Have a good day!!!")
        
 
-# b=ATM()
+b=ATM()
 # b1=ATM()
 # b1.SetCounter(23)
 # print(id(b))

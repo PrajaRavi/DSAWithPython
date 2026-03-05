@@ -168,7 +168,7 @@ class LL:
     return result[:-2]  
     
           
-l=LL()
+l=LL() 
 # l.append(9)
 l.append(6)
 l.append(7)
