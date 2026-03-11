@@ -98,6 +98,7 @@ class AVLTree:
         if balance < -1 and data < root.right.data:
             root.right = self.right_rotate(root.right)
             return self.left_rotate(root)
+        
         # self.__root=root
         # print(root.data)
         return root
